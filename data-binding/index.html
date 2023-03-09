@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Data Binding</title>
+</head>
+
+<body>
+  <div id="app">
+    <div>
+      <label for="email">Email</label>
+      <input type="email" v-model="email">
+      <span class="email">{{email}}</span>
+      <br>
+      <label for="pass">Password</label>
+      <input type="password" v-model="pass">
+      <span class="password">{{pass}}</span>
+      <br>
+      <label for="phone">Phone</label>
+      <input type="tel" v-model="phone">
+      <span class="phone">{{phone}}</span>
+    </div>
+
+    <p v-html="html"></p>
+    <p>{{ html }}</p>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
