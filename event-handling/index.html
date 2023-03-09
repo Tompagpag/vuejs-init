@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="style.css">
+  <title>Event Handling</title>
+</head>
+
+<body>
+  <div id="app">
+    <div class="container">
+      <form action="" @submit.prevent="onSubmit">
+        <input type="text" id="name" placeholder="name" v-model="name">
+        <input type="text" id="email" placeholder="email" v-model="email">
+        <input type="password" id="password" placeholder="password" v-model="password">
+        <input type="date" id="birth_date" placeholder="birth_date" v-model="birthDate">
+        <input type="submit" value="Envoyer">
+      </form>
+      <div class="result" v-if="data">
+        <hr>
+        <h3>Nom : {{ data.name }}</h3>
+        <p>Email : {{ data.email }}</p>
+        <p>Mot de passe : No way</p>
+        <p>Date de naissance : {{ data.birthDate }}</p>
+      </div>
+      <div class="error" v-else>
+        <h3>{{ message }}</h3>
+      </div>
+    </div>
+    </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
