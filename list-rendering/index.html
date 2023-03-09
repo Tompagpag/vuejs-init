@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>List Rendering</title>
+</head>
+
+<body>
+  <div id="app">
+    <ul>
+      <li v-for="item in items">{{ item }}</li>
+    </ul>
+    <hr>
+    <table>
+      <tbody>
+        <tr v-for="object in objects">
+          <td >{{ object.salut }}</td>
+          <br>
+          <td >{{ object.langue }}</td>
+          <br>
+          <td>{{ object.alternatif }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
