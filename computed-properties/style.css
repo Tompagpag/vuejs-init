@@ -1,0 +1,15 @@
+.container {
+  margin: 5rem auto;
+  max-width: 30%;
+  text-align: center;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr {
+  margin: 3rem 0;
+}

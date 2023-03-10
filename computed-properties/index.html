@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Computed properties</title>
+</head>
+<body>
+    <div id="app">
+      <div class="container">
+        <div class="checkboxes">
+          <label for="shop"> Faire des courses
+            <input type="checkbox" name="shop" id="shop" value="Faire des courses" v-model="checkedTasks">
+          </label>
+          <label for="work"> Réviser
+            <input type="checkbox" name="work" id="work" value="Réviser" v-model="checkedTasks">
+          </label>
+          <label for="mail"> Lire mes emails
+            <input type="checkbox" name="mail" id="mail" value="Lire mes emails" v-model="checkedTasks">
+          </label>
+          <label for="housework"> Faire le ménage
+            <input type="checkbox" name="housework" id="housework" value="Faire le ménage" v-model="checkedTasks">
+          </label>
+        </div>
+        <hr>
+        <p>Tâches complétées</p>
+        <ul>
+          {{ tasksDone }}
+        </ul>
+        <hr>
+        <p>Tâches à faire</p>
+        <ul>
+            {{ tasksToDo}}
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
